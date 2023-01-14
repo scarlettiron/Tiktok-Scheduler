@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  {% load static %}
+  
+  <link href="{% static 'css/general.css'%}" rel="stylesheet" type="text/css"/>
+
+  <title>{% block title %}{% endblock %}</title>
+
+
+  {%block header %} {% endblock %}
+
+</head>
+
+<body>
+  {% block navigation %} {% endblock %}
+
+  {% block body %} {% endblock %}
+
+  {% block scripts %} {% endblock %}
+</body>
+</html>
