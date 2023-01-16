@@ -1,0 +1,15 @@
+@import './main.css';
+@import './general.css';
+
+.btn-primary{
+    border-radius: 30px;
+    padding:20px;
+    outline:none;
+    text-decoration: none;
+    border:none;
+    font-weight: 800;
+    font-size: larger;
+    color: var(--text-primary);
+    background-image: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
+    /* -webkit-text-stroke: 1px gray; */
+}
