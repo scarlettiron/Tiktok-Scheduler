@@ -54,7 +54,7 @@ def upload_tiktokv1(self, request):
         return render(request, 'upload_tiktok.html', {'success':True, 'error':False})
 
 #For django template version endpoint       
-def upload_tiktok(self, request):
+def upload_tiktok(request):
     tiktok_form = tiktok_scheduler_form()
     if request.method == 'GET':
         return render(request, 'upload_tiktok.html', {'form':tiktok_form})
@@ -82,7 +82,7 @@ def upload_tiktok(self, request):
             return render(request, 'upload_tiktok.html', {'error':'Fill out all fields', 
                                                           'success':False,
                                                           'form':tiktok_form})
-        if ampm == 'PM':
+        if ampm == 'pm':
             fields['hour'] = fields['hour'] + 12
             if fields['hour'] > 24:
                 fields['hour'] = 0
