@@ -1,10 +1,41 @@
 {% extends 'layout.html' %}
 
+
 {% block title %} Upload tiktok Video{% endblock title %}
 
 {% block  body%} 
+    <form method='POST' enctype='multipart/form-data' class = 'tiktok-upload-form'>
+        {% csrf_token %}
+        <label for = "id_video" class = 'video-label'>
+        {{form.video}}
+            <div class = 'upload-btn'>
+                <h3 class='text-primary'>Upload Video</h3>
+            </div>
+        </label>
+        
+        <div class ='divider1'></div>
 
+        <div class = 'w-100 justify-content-center m-20'>
+            <h2 class = 'text-primary'> Schedule Time </div>
+        </div>
 
+        <div class='w-50 justify-content-center flex-wrap'>
+            {{form.month}}
+            {{form.hour}}
+            {{form.ampm}}
+        </div>
+        <div class='w-50 justify-content-center flex-wrap'>
+           {{form.day}}
+           {{form.minutes}}
+           {{form.year}}
+           {{form.timezone}}
+        </div>
+
+        <button class = 'm-20 btn-primary' form="tiktok-upload-from">
+            Schedule It
+        </button>
+    
+    </form>
 
 
 {% endblock body %}
