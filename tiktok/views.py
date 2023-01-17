@@ -11,7 +11,7 @@ from users.models import CustomUser
 
 
 #For django template version endpoint
-#@login_required(login_url='/login')     
+@login_required(login_url='/login')     
 def upload_tiktok(request):
     tiktok_form = tiktok_scheduler_form()
     if request.method == 'GET':
@@ -65,7 +65,7 @@ def upload_tiktok(request):
 class ScheduleTiktokPost(CreateAPIView):
     model = TiktokVideo
     serializer_class = tiktok_video_serializer
-    #permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     
              
         

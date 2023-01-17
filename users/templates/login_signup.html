@@ -9,5 +9,28 @@
 
 {% block  body%} 
 
+    <form class="form-main" method = "POST" id='login-signup-form'>
+        <div class='form-active form-section'>
+            {{form.username}}
+            {{form.password}}
+        </div>
 
-{% endblock vody%}
+        <div class='form-inactive justify-content-center flex-wrap'>
+            <div class='w-50 justify-content-center'>
+                {{form.username}}
+                {{form.password}}
+            <div>
+            <div class='w-50 justify-content-center'>
+                {{form.verifypassword}}
+                {{form.email}}
+            </div>
+        </div>
+        <div class="space-around m-20">
+            <button class='btn-primary' form='login-signup-form'>
+                Submit
+            </button>
+        </div>
+
+    </form
+
+{% endblock body%}
