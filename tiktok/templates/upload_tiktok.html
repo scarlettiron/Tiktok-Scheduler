@@ -1,10 +1,14 @@
 {% extends 'layout.html' %}
+{% load static %}
 
+{% block header %}
+    
+{% endblock header %}
 
 {% block title %} Upload tiktok Video{% endblock title %}
 
 {% block  body%} 
-    <form method='POST' enctype='multipart/form-data' class = 'tiktok-upload-form'>
+    <form method='POST' enctype='multipart/form-data' class='tiktok-upload-form' id='tiktok-upload-form'>
         {% csrf_token %}
         <label for = "id_video" class = 'video-label'>
         {{form.video}}
@@ -36,6 +40,7 @@
         </button>
     
     </form>
+    <script src="{% static 'javascript/upload_tiktok_helpers.js' %}"></script>
 
 
 {% endblock body %}
