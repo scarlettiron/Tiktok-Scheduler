@@ -25,3 +25,32 @@
     font-weight: 800;
     font-size: large;
 }
+
+
+.btn-choice{
+    padding:20px;
+    outline:none;
+    text-decoration: none;
+    border:none;
+    font-weight: 800;
+    font-size: larger;
+    background-color: none;
+    color:var(--text-muted);
+}
+
+.btn-choice.unmuted{
+    color:var(--theme-primary);
+}
+
+
+.input-main{
+    border-radius: 30px;
+    padding:5px;
+    margin:10px;
+    border:none;
+    outline:none;
+    width:70%;
+    text-align: center;
+    font-weight: 800;
+    font-size: large;
+}

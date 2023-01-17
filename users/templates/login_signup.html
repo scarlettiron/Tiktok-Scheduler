@@ -9,20 +9,24 @@
 
 {% block  body%} 
 
+    <div class='m-20 p-20 space-around w-50'>
+        <button class='btn-choice unmuted'>Login </button>
+        <button class='btn-choice'>Signup </button>
+    </div>
     <form class="form-main" method = "POST" id='login-signup-form'>
         <div class='form-active form-section'>
-            {{form.username}}
-            {{form.password}}
+            {{login_form.username}}
+            {{login_form.password}}
         </div>
 
         <div class='form-inactive justify-content-center flex-wrap'>
             <div class='w-50 justify-content-center'>
-                {{form.username}}
-                {{form.password}}
+                {{signup_form.username}}
+                {{signup_form.password}}
             <div>
             <div class='w-50 justify-content-center'>
-                {{form.verifypassword}}
-                {{form.email}}
+                {{signup_form.verifypassword}}
+                {{signup_form.email}}
             </div>
         </div>
         <div class="space-around m-20">
