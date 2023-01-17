@@ -3,13 +3,12 @@ const timezone_input = document.getElementById('id_timezone')
 const days = document.getElementById('id_day')
 const month = document.getElementById('id_month')
 const year_select = document.getElementById('id_year')
+const form = document.getElementById('tiktok-upload-form')
+const elements = Array.from(form.elements)
 
 
 //disable the first options for all inputs
 const disableFirstOption = () => {
-    form = document.getElementById('tiktok-upload-form')
-    elements = Array.from(form.elements)
-    console.log(elements)
     elements.forEach(el => {
         if(el.type === 'select-one'){
             el.options[0].disabled = true
@@ -91,4 +90,40 @@ const leapYearEdgeCase = (e) => {
 }
 
 year_select.addEventListener('change', leapYearEdgeCase)
+
+
+// ensure that all inputs have been filled out before disabling button and allowing
+//form to be submitted
+
+const checkToEnableBtn = () => {
+    let canDisable = true
+    //check to see if all inputs have been filled out or not
+    elements.forEach(el => {
+        // if input hasn't been filled out, return and keep btn disabled
+        if(el.type === 'select-one'){
+            let index = el.options.selectedIndex
+            if(!el.options[index].value){
+                canDisable = false 
+            }
+        }
+
+        if(el.type === 'file'){
+            if(!el.value){
+                canDisable = false
+            }
+        }
+        
+    })
+
+    if(!canDisable){ return }
+
+    //if all inputs are filled out, enable btn and allow form to be sent to backend
+    document.getElementById('upload-tiktok-btn').disabled = false
+
+}
+
+elements.forEach(el => {
+    console.log('adding event listeners')
+    el.addEventListener('change', checkToEnableBtn)
+})
 
