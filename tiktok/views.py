@@ -53,7 +53,7 @@ def upload_tiktok(request):
         
         user = CustomUser.objects.get(username = request.user.username)
         print(user)
-        serializer = tiktok_video_serializer(data={'file':video, 'user':user, 'scheduled':iso8601})
+        serializer = tiktok_video_serializer(data={'file':video, 'user':request.user.pk, 'scheduled':iso8601})
         if serializer.is_valid(raise_exception=True):
             serializer.save()
         
