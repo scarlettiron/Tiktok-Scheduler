@@ -10,7 +10,7 @@ const elements = Array.from(form.elements)
 //disable the first options for all inputs
 const disableFirstOption = () => {
     elements.forEach(el => {
-        if(el.type === 'select-one'){
+        if(el.type === 'select-one' & el.value != 'am'){
             el.options[0].disabled = true
         }
     })

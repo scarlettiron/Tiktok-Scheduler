@@ -8,7 +8,8 @@
 {% block title %} Upload tiktok Video{% endblock title %}
 
 {% block  body%} 
-    <form method='POST' enctype='multipart/form-data' class='tiktok-upload-form' id='tiktok-upload-form'>
+    <form method='POST' enctype='multipart/form-data' class='tiktok-upload-form' 
+    id='tiktok-upload-form' action = "{% url 'upload-tiktok-template' %}">
         {% csrf_token %}
         <label for = "id_video" class = 'video-label'>
         {{form.video}}
@@ -35,7 +36,7 @@
            {{form.timezone}}
         </div>
 
-        <button class = 'm-20 btn-primary' form="tiktok-upload-from"  id = 'upload-tiktok-btn' disabled>
+        <button class = 'm-20 btn-primary' form="tiktok-upload-form"  id = 'upload-tiktok-btn' disabled>
             Schedule It
         </button>
     
