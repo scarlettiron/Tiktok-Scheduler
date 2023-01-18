@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework',
     'users.apps.UsersConfig',
+    #for native template rendering version
+    'oauth2_provider',
     'tiktok.apps.TiktokConfig',
      
 ]

@@ -1,4 +1,8 @@
-from django.forms import Form, CharField, EmailField, TextInput, EmailInput
+from django.forms import Form, ModelForm, CharField, EmailField, TextInput, EmailInput
+from django.conf import settings
+#User = settings.AUTH_USER_MODEL
+
+from django.contrib.auth.models import User
 
 
 class login_form(Form):
@@ -13,7 +17,28 @@ class login_form(Form):
     }))
     
 
-class signup_form(Form):
+class signup_form(ModelForm):
+    class Meta:
+        model = User
+        fields = ('username', 'password', 'email')
+        widgets = {
+            'username':TextInput(attrs={
+                        'placeholder': 'Username',
+                        'class' : 'input-main'
+            }),
+            'password':TextInput(attrs={
+                        'placeholder': 'Password',
+                        'class' : 'input-main'
+            }), 
+            'email':EmailInput(attrs={
+                        'placeholder': 'Email',
+                        'class' : 'input-main'
+            })
+        }
+
+
+
+''' class signup_form(Form):
     username=CharField(max_length=50, widget=TextInput(attrs = {
         'placeholder': 'Username',
         'class' : 'input-main'
@@ -29,4 +54,4 @@ class signup_form(Form):
     email = EmailField(max_length=150, widget=EmailInput(attrs = {
         'placeholder': 'Email',
         'class' : 'input-main'
-    }))
+    })) '''
