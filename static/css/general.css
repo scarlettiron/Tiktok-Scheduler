@@ -107,3 +107,12 @@
 .text-secondary{
     color:var(--text-secondary);
 }
+
+.text-title{
+    color:var(--theme-primary);
+    font-weight: 900;
+}
+
+.text-theme-secondary{
+    color:var(--theme-secondary);
+}

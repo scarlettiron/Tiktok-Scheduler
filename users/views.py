@@ -19,13 +19,13 @@ def login_signup(request):
     }
     
     if request.user.is_authenticated:
-        redirect(to='/')
+        redirect(to='upload-tiktok-template')
         
     if request.method == 'GET':
         return render(request, 'login_signup.html', args)
     
     if request.method == 'POST':
-        email = request.POST('email', None)
+        email = request.POST.get('email', None)
         
         #handle user login
         if not email:
@@ -40,8 +40,9 @@ def login_signup(request):
             if not user:
                 args['errors'] = 'Invalid Credentials'
                 return render(request, 'login_signup.html', args)
+            
             login(request, user)
-            redirect(to='/userhome')
+            return redirect(to='upload-tiktok-template')
             
          #handle user signup   
         if email:
@@ -50,7 +51,7 @@ def login_signup(request):
                 args['errors'] = check.errors
                 return render(request, 'login_signup.html', args)
             check.save()
-            return redirect('/login')
+            return redirect('login-signup')
             
     #to cover edge cases for request that are not supported
     if request.method != 'POST' or request.method != 'GET':

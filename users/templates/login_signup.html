@@ -2,39 +2,38 @@
 {% load static %}
 
 {% block header %}
-    
+   
 {% endblock header %}
 
 {% block title %} Upload tiktok Video{% endblock title %}
 
 {% block  body%} 
 
-    <div class='m-20 p-20 space-around w-50'>
-        <button class='btn-choice unmuted'>Login </button>
-        <button class='btn-choice'>Signup </button>
-    </div>
-    <form class="form-main" method = "POST" id='login-signup-form'>
-        <div class='form-active form-section'>
-            {{login_form.username}}
-            {{login_form.password}}
+    <div class='form-main'>
+        <div class='space-around w-50'>
+            <button class='btn-choice unmuted' id='login-btn'>Login </button>
+            <h1 class='text-theme-secondary'> | </h1>
+            <button class='btn-choice' id='signup-btn'>Signup </button>
         </div>
 
-        <div class='form-inactive justify-content-center flex-wrap'>
-            <div class='w-50 justify-content-center'>
+        <form class="w-100 justify-content-center flex-wrap" method = "POST" id='login-signup-form'>
+            {% csrf_token %}
+
+            <div class='justify-content-center flex-wrap'>
                 {{signup_form.username}}
-                {{signup_form.password}}
-            <div>
-            <div class='w-50 justify-content-center'>
-                {{signup_form.verifypassword}}
-                {{signup_form.email}}
+                {{signup_form.password}} 
+                <div class='w-100 justify-content-center flex-wrap form-inactive' id='signup-fields'>
+                    <input class='input-main' placeholder='Verify Password'/>
+                    {{signup_form.email}}
+                </div>
             </div>
-        </div>
-        <div class="space-around m-20">
-            <button class='btn-primary' form='login-signup-form'>
-                Submit
-            </button>
-        </div>
+            <div class="space-around m-20">
+                <button class='btn-primary' form='login-signup-form'>
+                    Submit
+                </button>
+            </div>
 
-    </form
-
+        </form
+    </div>
+    <script src="{% static 'javascript/login_signup.js' %}"></script>
 {% endblock body%}

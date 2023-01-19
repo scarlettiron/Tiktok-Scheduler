@@ -28,18 +28,20 @@
 
 
 .btn-choice{
-    padding:20px;
+    padding:15px;
     outline:none;
     text-decoration: none;
     border:none;
     font-weight: 800;
     font-size: larger;
-    background-color: none;
+    background-color: transparent;
     color:var(--text-muted);
+    margin:10px;
 }
 
 .btn-choice.unmuted{
     color:var(--theme-primary);
+    border-bottom:solid 1px var(--theme-primary);
 }
 
 
