@@ -1,7 +1,9 @@
 from django.forms import Form, ModelForm, CharField, TextInput, EmailInput
-
+from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
+from django.db.models import Q
 
+from .models import CustomUser
 
 class login_form(Form):
     username=CharField(max_length=50, widget=TextInput(attrs = {
@@ -36,6 +38,18 @@ class signup_form(ModelForm):
                         
             })
         }
+        
+    def clean(self):
+        #check to make sure username and email are unique
+        email = self.cleaned_data['email']
+        username = self.cleaned_data['username']
+        check = CustomUser.objects.filter(Q(email = email) | Q(username = username))
+        if len(check) > 0:
+            raise ValidationError('Email or Username Exists')
+        
+        #make username lower cased
+        self.cleaned_data['username'] = self.cleaned_data['username'].lower()
+        return self.cleaned_data     
 
 
 
