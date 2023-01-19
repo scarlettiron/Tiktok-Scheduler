@@ -19,7 +19,7 @@ def login_signup(request):
     }
     
     if request.user.is_authenticated:
-        redirect(to='upload-tiktok-template')
+        redirect('upload-tiktok-template')
         
     if request.method == 'GET':
         return render(request, 'login_signup.html', args)
@@ -46,6 +46,13 @@ def login_signup(request):
             
          #handle user signup   
         if email:
+            # make sure passwords match
+            password = request.POST.get('password')
+            verifypassword = request.POST.get('verifypassword')
+            if verifypassword != password:
+                args['errors'] = 'Passwords do not match'
+                return render(request, 'login_signup.html', args)
+            
             check = signup_form(request.POST)
             if not check.is_valid():
                 args['errors'] = check.errors

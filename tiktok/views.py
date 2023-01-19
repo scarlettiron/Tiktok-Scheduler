@@ -21,7 +21,7 @@ def upload_tiktok(request):
         form = tiktok_scheduler_form(request.POST, request.FILES)
         
         if not form.is_valid():
-            return render(request, 'upload_tiktok.html')
+            return render(request, 'upload_tiktok.html', {'form':tiktok_form})
         
         fields = {}
         form.clean()
