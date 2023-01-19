@@ -1,0 +1,41 @@
+
+:root{
+    --background: rgb(52, 53, 61);
+    --theme-primary: rgb(0, 213, 255);
+    --theme-secondary: rgb(0, 173, 115);
+    --fade-theme:yellow;
+    --form-border:rgb(128, 128, 128);
+    --text-primary:rgb(236, 237, 238);
+    --text-muted:rgb(128, 128, 128);
+    
+}
+
+body{
+    background-color: var(--background);
+    padding:0;
+    margin:0;
+}
+
+.divider1{
+  width:75%;
+  margin:0 auto;
+  border-bottom:solid 5px var(--form-border);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  li {
+    cursor: pointer;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  
+  .temp{
+    border:solid 2px lime;
+  }

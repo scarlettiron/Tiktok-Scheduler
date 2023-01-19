@@ -1,0 +1,58 @@
+@import './main.css';
+@import './general.css';
+
+.btn-primary{
+    border-radius: 30px;
+    padding:20px;
+    outline:none;
+    text-decoration: none;
+    border:none;
+    font-weight: 800;
+    font-size: larger;
+    color: var(--text-primary);
+    background-image: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
+    /* -webkit-text-stroke: 1px gray; */
+}
+
+
+.btn2{
+    border-radius:50px;
+    background-color: var(--theme-primary);
+    padding:10px;
+}
+
+.btn2 h3{
+    font-weight: 800;
+    font-size: large;
+}
+
+
+.btn-choice{
+    padding:15px;
+    outline:none;
+    text-decoration: none;
+    border:none;
+    font-weight: 800;
+    font-size: larger;
+    background-color: transparent;
+    color:var(--text-muted);
+    margin:10px;
+}
+
+.btn-choice.unmuted{
+    color:var(--theme-primary);
+    border-bottom:solid 1px var(--theme-primary);
+}
+
+
+.input-main{
+    border-radius: 30px;
+    padding:5px;
+    margin:10px;
+    border:none;
+    outline:none;
+    width:70%;
+    text-align: center;
+    font-weight: 800;
+    font-size: large;
+}

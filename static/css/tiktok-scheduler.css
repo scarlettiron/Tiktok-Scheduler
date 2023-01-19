@@ -1,0 +1,68 @@
+@import './main.css';
+
+.tiktok-upload-form{
+    width:100%;
+    margin:0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border:solid 2px var(--form-border);
+    /* border-image: ;*/
+    border-radius: 10px;
+} 
+
+@media (min-width:525px){
+    .tiktok-upload-form{
+        width:500px;
+    }
+}
+
+
+.tiktok-input{
+    border-radius: 30px;
+    padding:5px;
+    margin:10px;
+    border:none;
+    outline:none;
+    width:70%;
+    text-align: center;
+    font-weight: 800;
+    font-size: large;
+}
+
+.video-label input{
+    display:none;
+}
+
+.video-label{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:100%;
+}
+
+.upload-btn{
+    border-radius:50px;
+    background-color: var(--theme-primary);
+    padding:10px;
+}
+
+.upload-btn h3{
+    font-weight: 800;
+    font-size: large;
+}
+
+.form-border-div{
+    width:100vw;
+}
+
+@media (min-width:500px){
+    .form-border-div{
+        border-top:1px solid var(--theme-secondary);
+        border-right: 1px solid var(--theme-secondary);
+        padding:5px;
+        width: 510px;
+    }
+}

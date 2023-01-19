@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block header %}
+   
+{% endblock header %}
+
+{% block title %} Upload tiktok Video{% endblock title %}
+
+{% block  body%} 
+
+    <div class='form-main'>
+        <div class='space-around w-50'>
+            <button class='btn-choice unmuted' id='login-btn'>Login </button>
+            <h1 class='text-theme-secondary'> | </h1>
+            <button class='btn-choice' id='signup-btn'>Signup </button>
+        </div>
+
+        <form class="w-100 justify-content-center flex-wrap" method = "POST" id='login-signup-form'>
+            {% csrf_token %}
+
+            <div class='justify-content-center flex-wrap'>
+                {{signup_form.username}}
+                {{signup_form.password}} 
+                <div class='w-100 justify-content-center flex-wrap form-inactive' id='signup-fields'>
+                    <input class='input-main' placeholder='Verify Password'/>
+                    {{signup_form.email}}
+                </div>
+            </div>
+            <div class="space-around m-20">
+                <button class='btn-primary' form='login-signup-form'>
+                    Submit
+                </button>
+            </div>
+
+        </form
+    </div>
+    <script src="{% static 'javascript/login_signup.js' %}"></script>
+{% endblock body%}

@@ -3,14 +3,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {% load static %}
   
+  <link href="{% static 'css/main.css'%}" rel="stylesheet" type="text/css"/>
   <link href="{% static 'css/general.css'%}" rel="stylesheet" type="text/css"/>
-
+  <link href="{% static 'css/buttons-inputs.css'%}" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'css/forms.css'%}" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'css/tiktok-scheduler.css'%}" rel="stylesheet" type="text/css"/>
+  
   <title>{% block title %}{% endblock %}</title>
 
 
-  {%block header %} {% endblock %}
+  {% block header %} {% endblock %}
 
 </head>
 
@@ -21,4 +26,6 @@
 
   {% block scripts %} {% endblock %}
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </html>

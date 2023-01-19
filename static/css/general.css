@@ -1,32 +1,4 @@
-
-:root{
-    --background: rgb(43, 50, 90);
-    --theme-primary: rgb(255, 0, 0);
-    --theme-secondary: navy;
-    --fade-theme:yellow;
-}
-
-body{
-    background-color: var(--background);
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  li {
-    cursor: pointer;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  
-  .temp{
-    border:solid 2px lime;
-  }
+@import './main.css';
   
   
 
@@ -80,6 +52,10 @@ a {
     justify-content: space-around;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 .display-inline{
     display: inline;
 }
@@ -122,4 +98,21 @@ a {
 
 .text-white{
     color:whitesmoke;
+}
+
+.text-primary{
+    color:var(--text-primary);
+}
+
+.text-secondary{
+    color:var(--text-secondary);
+}
+
+.text-title{
+    color:var(--theme-primary);
+    font-weight: 900;
+}
+
+.text-theme-secondary{
+    color:var(--theme-secondary);
 }
