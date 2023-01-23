@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     #for native template rendering version
     'oauth2_provider',
     'tiktok.apps.TiktokConfig',
+    'SocialPlatforms.apps.SocialplatformsConfig',
+    'testing.apps.TestingConfig',
      
 ]
 
@@ -148,7 +150,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CELERY_BROKER_URL=config('CELERY_BROKER')
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_CACHE_BACKEND = 'django-cache'
-#CELERY_TIMEZONE = "UTC"
+CELERY_TIMEZONE = "UTC"
+TIME_ZONE = 'UTC'
+
+#CELERY_ACCEPT_CONTENT = ['application/json']  
+#CELERY_TASK_SERIALIZER = 'json'  
+#CELERY_RESULT_SERIALIZER = 'json'

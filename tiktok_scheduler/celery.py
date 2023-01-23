@@ -14,6 +14,3 @@ app.conf.result_chord_retry_interval = 5
 app.conf.result_expires = timedelta(days=3)
 
 
-@app.task(bind=True)
-def debug_task(self):
-    print("Request: {0!r}".format(self.request))

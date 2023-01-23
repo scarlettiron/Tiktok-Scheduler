@@ -9,4 +9,6 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('tiktok/', include('tiktok.urls')), 
     path('users/', include('users.urls')),
+    path('socials/', include('SocialPlatforms.urls')),
+    path('test/', include('testing.urls')),
 ]
