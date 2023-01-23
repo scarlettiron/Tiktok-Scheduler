@@ -17,7 +17,8 @@ class TiktokUtils:
         
         tiktok_key = config('TIKTOK_APP_CLIENT_SECRET')
         auth_url = config('TIKTOK_AUTH_URL')
-        redirect_url = config('PLATFORM_REDIRECT_URL')
+        #redirect_url = config('PLATFORM_REDIRECT_URL')
+        redirect_url = "192.168.2.3:8000/socials/add-platform-redirect/"
         redirect_url_endpoint = f"{redirect_url}platform=tiktok&"
         
         url = f"{auth_url}/?client_key={tiktok_key}&scope=user.info.basic,video.list,video.add&response_type=code&redirect_uri={redirect_url_endpoint}&state={csrf_token}"
@@ -65,7 +66,7 @@ class TiktokUtils:
             self.add_post_errors(post, 'tiktok auth error')
             return False
         
-        video = S3Utils.get_video(post)
+        video = S3Utils.get_video(post.video)
         url = f"{social.platform.add_url}open_id={self.open_id}&access_token={self.access_token}"
         
         request = requests.post(url, 
