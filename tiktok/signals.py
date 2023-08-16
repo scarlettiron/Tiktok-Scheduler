@@ -5,7 +5,7 @@ from django_celery_beat.models import CrontabSchedule, PeriodicTask
 import pendulum as pen
 import json
 
-@receiver(post_save, TiktokVideo)
+@receiver(post_save, sender = TiktokVideo)
 def schedule_upload(self, instance, created, **kwargs):
     if not created or instance.uploaded == True:
         return 
