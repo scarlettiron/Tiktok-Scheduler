@@ -1,0 +1,214 @@
+[2023-01-21 09:00:40,341: INFO/SpawnPoolWorker-2] child process 24544 calling self.run()
+[2023-01-21 09:00:40,352: INFO/SpawnPoolWorker-1] child process 12948 calling self.run()
+[2023-01-21 09:00:40,356: INFO/SpawnPoolWorker-4] child process 1768 calling self.run()
+[2023-01-21 09:00:40,378: INFO/SpawnPoolWorker-5] child process 4260 calling self.run()
+[2023-01-21 09:00:40,393: INFO/SpawnPoolWorker-6] child process 18028 calling self.run()
+[2023-01-21 09:00:40,411: INFO/SpawnPoolWorker-3] child process 1596 calling self.run()
+[2023-01-21 09:00:42,041: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2023-01-21 09:00:42,303: INFO/SpawnPoolWorker-7] child process 2184 calling self.run()
+[2023-01-21 09:00:44,079: INFO/MainProcess] mingle: searching for neighbors
+[2023-01-21 09:00:51,228: INFO/MainProcess] mingle: all alone
+[2023-01-21 09:01:01,424: WARNING/MainProcess] C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\fixups\django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2023-01-21 09:01:01,424: INFO/MainProcess] celery@LAPTOP-S0EUNL0B ready.
+[2023-01-21 09:01:01,435: INFO/MainProcess] Task tiktok_scheduler.celery.debug_task[2ce759c8-c165-42c3-ae3e-14b32288aef0] received
+[2023-01-21 09:01:02,654: INFO/SpawnPoolWorker-8] child process 13284 calling self.run()
+[2023-01-21 09:01:02,655: INFO/SpawnPoolWorker-10] child process 16676 calling self.run()
+[2023-01-21 09:01:02,656: INFO/SpawnPoolWorker-11] child process 13548 calling self.run()
+[2023-01-21 09:01:02,659: INFO/SpawnPoolWorker-9] child process 21668 calling self.run()
+[2023-01-21 12:12:13,049: WARNING/MainProcess] Restoring 1 unacknowledged message(s)
+[2023-01-21 12:14:27,968: INFO/SpawnPoolWorker-5] child process 2348 calling self.run()
+[2023-01-21 12:14:27,978: INFO/SpawnPoolWorker-2] child process 13672 calling self.run()
+[2023-01-21 12:14:27,995: INFO/SpawnPoolWorker-6] child process 7008 calling self.run()
+[2023-01-21 12:14:27,995: INFO/SpawnPoolWorker-1] child process 17896 calling self.run()
+[2023-01-21 12:14:28,011: INFO/SpawnPoolWorker-3] child process 22880 calling self.run()
+[2023-01-21 12:14:28,044: INFO/SpawnPoolWorker-4] child process 18052 calling self.run()
+[2023-01-21 12:14:29,615: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2023-01-21 12:14:29,960: INFO/SpawnPoolWorker-8] child process 23056 calling self.run()
+[2023-01-21 12:14:29,970: INFO/SpawnPoolWorker-7] child process 4292 calling self.run()
+[2023-01-21 12:14:31,624: INFO/SpawnPoolWorker-9] child process 12212 calling self.run()
+[2023-01-21 12:14:33,705: INFO/MainProcess] mingle: searching for neighbors
+[2023-01-21 12:14:34,180: INFO/SpawnPoolWorker-10] child process 4260 calling self.run()
+[2023-01-21 12:14:40,861: INFO/MainProcess] mingle: all alone
+[2023-01-21 12:14:49,049: WARNING/MainProcess] C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\fixups\django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2023-01-21 12:14:49,050: INFO/MainProcess] celery@LAPTOP-S0EUNL0B ready.
+[2023-01-21 12:14:49,054: INFO/MainProcess] Task tiktok_scheduler.celery.debug_task[2ce759c8-c165-42c3-ae3e-14b32288aef0] received
+[2023-01-21 12:14:50,296: INFO/SpawnPoolWorker-11] child process 3548 calling self.run()
+[2023-01-21 12:14:50,300: INFO/SpawnPoolWorker-12] child process 6684 calling self.run()
+[2023-01-21 12:14:50,304: INFO/SpawnPoolWorker-13] child process 14812 calling self.run()
+[2023-01-21 13:14:21,143: ERROR/MainProcess] Received unregistered task of type 'testing.tasks.test_process'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[42], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'testing.tasks.test_process', 'id': '86bb4da6-e01b-4f87-8b1b-4165a103b8f2', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '86bb4da6-e01b-4f87-8b1b-4165a103b8f2', 'parent_id': None, 'argsrepr': '[42]', 'kwargsrepr': '{}', 'origin': 'gen14948@LAPTOP-S0EUNL0B', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\worker\consumer\consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'testing.tasks.test_process'
+[2023-01-21 13:14:21,349: ERROR/MainProcess] Received unregistered task of type 'testing.tasks.test_process'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[41], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'testing.tasks.test_process', 'id': 'b731ddc0-b12d-42b2-99af-50dda6485b05', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b731ddc0-b12d-42b2-99af-50dda6485b05', 'parent_id': None, 'argsrepr': '[41]', 'kwargsrepr': '{}', 'origin': 'gen14948@LAPTOP-S0EUNL0B', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\worker\consumer\consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'testing.tasks.test_process'
+[2023-01-21 13:15:00,007: ERROR/MainProcess] Received unregistered task of type 'testing.tasks.test_process'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[43], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'testing.tasks.test_process', 'id': 'f53c0f61-1294-4553-9aaa-b474f3f0321b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'f53c0f61-1294-4553-9aaa-b474f3f0321b', 'parent_id': None, 'argsrepr': '[43]', 'kwargsrepr': '{}', 'origin': 'gen14948@LAPTOP-S0EUNL0B', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\worker\consumer\consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'testing.tasks.test_process'
+[2023-01-21 13:19:14,642: ERROR/MainProcess] Received unregistered task of type 'testing.tasks.test_process'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[45], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'testing.tasks.test_process', 'id': '893d57e9-220a-4fc1-9f26-32770a603ae1', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '893d57e9-220a-4fc1-9f26-32770a603ae1', 'parent_id': None, 'argsrepr': '[45]', 'kwargsrepr': '{}', 'origin': 'gen14948@LAPTOP-S0EUNL0B', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\worker\consumer\consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'testing.tasks.test_process'
+[2023-01-21 13:19:14,658: ERROR/MainProcess] Received unregistered task of type 'testing.tasks.test_process'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[44], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'testing.tasks.test_process', 'id': 'dbaad988-1e56-4484-b2b1-a878117fa2aa', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'dbaad988-1e56-4484-b2b1-a878117fa2aa', 'parent_id': None, 'argsrepr': '[44]', 'kwargsrepr': '{}', 'origin': 'gen14948@LAPTOP-S0EUNL0B', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\worker\consumer\consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'testing.tasks.test_process'
+[2023-01-21 20:44:00,086: ERROR/MainProcess] Received unregistered task of type 'testing_func'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[50], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'testing_func', 'id': '96fa9375-6701-46c6-aab7-ff410a8b4894', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '96fa9375-6701-46c6-aab7-ff410a8b4894', 'parent_id': None, 'argsrepr': '[50]', 'kwargsrepr': '{}', 'origin': 'gen14948@LAPTOP-S0EUNL0B', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\worker\consumer\consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'testing_func'
+[2023-01-21 21:28:39,977: INFO/SpawnPoolWorker-5] child process 24812 calling self.run()
+[2023-01-21 21:28:40,039: INFO/SpawnPoolWorker-1] child process 21616 calling self.run()
+[2023-01-21 21:28:40,049: INFO/SpawnPoolWorker-3] child process 16352 calling self.run()
+[2023-01-21 21:28:40,057: INFO/SpawnPoolWorker-2] child process 23300 calling self.run()
+[2023-01-21 21:28:40,086: INFO/SpawnPoolWorker-4] child process 23808 calling self.run()
+[2023-01-21 21:28:40,091: INFO/SpawnPoolWorker-6] child process 18060 calling self.run()
+[2023-01-21 21:28:41,299: INFO/SpawnPoolWorker-7] child process 6688 calling self.run()
+[2023-01-21 21:28:41,474: INFO/SpawnPoolWorker-8] child process 11080 calling self.run()
+[2023-01-21 21:28:41,474: INFO/SpawnPoolWorker-9] child process 22640 calling self.run()
+[2023-01-21 21:28:41,763: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2023-01-21 21:28:45,846: INFO/MainProcess] mingle: searching for neighbors
+[2023-01-21 21:28:52,987: INFO/MainProcess] mingle: all alone
+[2023-01-21 21:29:01,178: WARNING/MainProcess] C:\Users\scott\.virtualenvs\tiktok_uploader-PCpzNl2z\lib\site-packages\celery\fixups\django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2023-01-21 21:29:01,178: INFO/MainProcess] celery@LAPTOP-S0EUNL0B ready.
+[2023-01-21 21:29:01,180: INFO/MainProcess] Task tiktok_scheduler.celery.debug_task[2ce759c8-c165-42c3-ae3e-14b32288aef0] received
+[2023-01-21 21:29:02,225: INFO/SpawnPoolWorker-10] child process 21128 calling self.run()
+[2023-01-21 21:31:00,035: INFO/MainProcess] Task testing_func[1668f62d-9c85-4cdd-bdb8-b1fe03ea3693] received
+[2023-01-21 21:31:00,834: INFO/SpawnPoolWorker-11] child process 21944 calling self.run()
+[2023-01-21 21:39:00,010: INFO/MainProcess] Task testing_func[a3ddc7d1-66a1-4e98-b7ad-71415eb3bfee] received
+[2023-01-21 21:39:00,963: INFO/SpawnPoolWorker-12] child process 10748 calling self.run()
+[2023-01-21 21:58:21,038: ERROR/MainProcess] Process 'SpawnPoolWorker-12' pid:21436 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:21,040: ERROR/MainProcess] Process 'SpawnPoolWorker-9' pid:10000 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:21,040: ERROR/MainProcess] Process 'SpawnPoolWorker-8' pid:12148 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:21,315: INFO/SpawnPoolWorker-13] child process 20260 calling self.run()
+[2023-01-21 21:58:21,317: INFO/SpawnPoolWorker-15] child process 21036 calling self.run()
+[2023-01-21 21:58:22,938: INFO/SpawnPoolWorker-17] child process 22848 calling self.run()
+[2023-01-21 21:58:22,938: INFO/SpawnPoolWorker-16] child process 23776 calling self.run()
+[2023-01-21 21:58:23,492: ERROR/MainProcess] Process 'SpawnPoolWorker-17' pid:19132 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:23,492: ERROR/MainProcess] Process 'SpawnPoolWorker-16' pid:17768 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:23,735: INFO/SpawnPoolWorker-18] child process 6332 calling self.run()
+[2023-01-21 21:58:23,746: INFO/SpawnPoolWorker-19] child process 17072 calling self.run()
+[2023-01-21 21:58:25,378: INFO/SpawnPoolWorker-20] child process 24296 calling self.run()
+[2023-01-21 21:58:27,115: ERROR/MainProcess] Process 'SpawnPoolWorker-19' pid:18760 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:27,116: ERROR/MainProcess] Process 'SpawnPoolWorker-4' pid:11664 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:27,116: ERROR/MainProcess] Process 'SpawnPoolWorker-2' pid:16540 exited with 'exitcode 3221225786'
+[2023-01-21 21:58:32,127: WARNING/MainProcess] Restoring 3 unacknowledged message(s)

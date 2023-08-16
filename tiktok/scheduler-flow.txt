@@ -1,0 +1,11 @@
+user enters info to be scheduled
+info is sent to backend
+info is processed and saved to db
+
+when entry is saved signal from db triggers
+
+task function is loaded from task.py
+
+task function receives argument of scheduled tiktok upload for later use
+
+task is scheduled using crons for later date

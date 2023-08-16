@@ -22,11 +22,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "corsheaders",
+    "channels", 
+    "celery",
+    'django_celery_beat',
+    'django_celery_results',
     'rest_framework',
     'users.apps.UsersConfig',
     #for native template rendering version
     'oauth2_provider',
     'tiktok.apps.TiktokConfig',
+    'SocialPlatforms.apps.SocialplatformsConfig',
+    'testing.apps.TestingConfig',
      
 ]
 
@@ -64,8 +70,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tiktok_scheduler.wsgi.application'
-
+ASGI_APPLICATION = 'tiktok_scheduler.asgi.application'
+ASGI_THREADS = config('ASGI_THREADS')
 
 
 
@@ -81,8 +87,17 @@ DATABASES = {
 #DATABASES = {"default": dj_database_url.config(default=DATABASE_URL, conn_max_age=int(config('DB_CONNECTION_AGE')))}
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            #"hosts": [config('REDIS_URL')],
+            "symmetric_encryption_keys":[SECRET_KEY],
+            "hosts": [('localhost', 6379)]
+        },
+    },
+}
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -132,3 +147,15 @@ STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMIAN}/static/' '''
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CELERY_BROKER_URL=config('CELERY_BROKER')
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_CACHE_BACKEND = 'django-cache'
+CELERY_TIMEZONE = "UTC"
+TIME_ZONE = 'UTC'
+
+#CELERY_ACCEPT_CONTENT = ['application/json']  
+#CELERY_TASK_SERIALIZER = 'json'  
+#CELERY_RESULT_SERIALIZER = 'json'
